@@ -16,16 +16,17 @@
   </div>
   <div class="field">
     <%= form.label :search %>
-    <%= form.search_field :search, class: "form-control", data: {target: "maps.field"} %>
+    <%= form.search_field :search, name: nil, class: "form-control", data: {target: "maps.field"} %>
   </div>
   <div class="field">
     <%= form.label :latitude %>
-    <%= form.text_field :latitude, class: "form-control" data: {target: "maps.latitude"} %>
+    <%= form.text_field :latitude, class: "form-control", data: {target: "maps.latitude"} %>
   </div>
   <div class="field">
     <%= form.label :longitude %>
-    <%= form.text_field :longitude, class: "form-control" data: {target: "maps.longitude"} %>
+    <%= form.text_field :longitude, class: "form-control", data: {target: "maps.longitude"} %>
   </div>
+  <%= content_tag :div, nil, data: {target: "maps.map"}, class: "map"%>
   <div class="actions">
     <%= form.submit %>
   </div>
