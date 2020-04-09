@@ -1,5 +1,7 @@
-<%= form_with(model: place, local: true, data: {
-  controller: :maps, action: "google-maps-callback@window->maps#initializeMap"}) do |form| %>
+<%= form_with model: place, local: true, data: {
+                                            controller: :maps,
+                                            action: "google-maps-callback@window->maps#initializeMap"
+                                          } do |form| %>
   <% if place.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
@@ -26,7 +28,7 @@
     <%= form.label :longitude %>
     <%= form.text_field :longitude, class: "form-control", data: {target: "maps.longitude"} %>
   </div>
-  <%= content_tag :div, nil, data: {target: "maps.map"}, class: "map"%>
+  <%= content_tag :div, nil, data: { target: "maps.map" }, class: 'map' %>
   <div class="actions">
     <%= form.submit %>
   </div>
