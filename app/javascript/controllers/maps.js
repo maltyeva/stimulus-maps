@@ -66,5 +66,9 @@ export default class extends Controller {
     this.latitudeTarget.value = place.geometry.location.lat()
     this.longitudeTarget.value = place.geometry.location.lng()
   }
+
+   preventSubmit(e) {
+    if (e.key == "Enter") { e.preventDefault() }
+  }
 }
 
